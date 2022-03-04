@@ -4,12 +4,12 @@
 ; as published by Sam Hocevar. See the COPYING.txt file for more details.
 
 #define MyAppName "Godot"
-#define MyAppVersion "3.4.2"
+#define MyAppVersion "3.4.3"
 #define MyAppPublisher "Godot Developers"
 #define MyAppURL "https://godotengine.org/"
 #define MyAppExeName   "Godot.exe"
-#define MyAppExeName32 "Godot_v3.4.3-stable_win32.exe"
-#define MyAppExeName64 "Godot_v3.4.3-stable_win64.exe"
+#define MyAppExeName32 "Godot_v" + MyAppVersion + "-stable_win32.exe"
+#define MyAppExeName64 "Godot_v" + MyAppVersion + "-stable_win64.exe"
 #define MyAppAssocName MyAppName + " Project"
 #define MyAppAssocExt ".godot"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -27,7 +27,7 @@ ChangesAssociations=yes
 DisableProgramGroupPage=yes
 LicenseFile=godot\License.txt
 PrivilegesRequiredOverridesAllowed=dialog
-OutputBaseFilename=godot
+OutputBaseFilename=godot-installer-{#MyAppVersion}
 SetupIconFile=godot\icon_outlined.ico
 Compression=lzma
 SolidCompression=yes
